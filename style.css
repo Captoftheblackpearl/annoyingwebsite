@@ -1,0 +1,191 @@
+:root {
+    --neon-red: #ff0055;
+    --terminal-green: #00ff41;
+    --classic-blue: #000080;
+}
+
+body {
+    background-color: #050505;
+    color: var(--neon-red);
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    cursor: wait;
+    transition: background-color 0.1s;
+}
+
+/* Background Strobing */
+.strobe-active {
+    animation: strobe 0.1s infinite;
+}
+
+@keyframes strobe {
+    0% {
+background-color: #050505;
+    }
+
+    50% {
+background-color: #330000;
+    }
+
+    100% {
+background-color: #050505;
+    }
+}
+
+.alert-banner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: yellow;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.terminal {
+    border: 5px solid var(--neon-red);
+    padding: 2rem;
+    background: rgba(255, 0, 85, 0.05);
+    box-shadow: 0 0 30px var(--neon-red);
+    text-align: center;
+    max-width: 700px;
+    z-index: 10;
+    position: relative;
+}
+
+h1 {
+    animation: shake 0.2s infinite;
+    font-size: 2.5rem;
+    margin-top: 0;
+}
+
+@keyframes shake {
+    0% {
+transform: translate(1px, 1px);
+    }
+
+    50% {
+transform: translate(-2px, -1px);
+    }
+
+    100% {
+transform: translate(1px, 1px);
+    }
+}
+
+.progress-container {
+    width: 100%;
+    background: #111;
+    height: 25px;
+    margin: 20px 0;
+    border: 1px solid #444;
+}
+
+#ram-bar {
+    width: 0%;
+    height: 100%;
+    background: var(--terminal-green);
+    box-shadow: 0 0 10px var(--terminal-green);
+}
+
+.interaction-zone {
+    margin: 20px;
+}
+
+.hostile-btn {
+    padding: 15px 30px;
+    background: var(--neon-red);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: not-allowed;
+    position: fixed;
+    /* For the bouncing logic */
+    z-index: 1000;
+    box-shadow: 4px 4px 0px #000;
+}
+
+#log-box {
+    margin-top: 20px;
+    height: 60px;
+    overflow: hidden;
+    font-size: 0.8rem;
+    color: #888;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+}
+
+/* Fake System Popups */
+#popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+}
+
+.popup-box {
+    width: 350px;
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 1);
+}
+
+.popup-header {
+    background: var(--classic-blue);
+    color: white;
+    padding: 4px 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.popup-content {
+    padding: 20px;
+    text-align: center;
+    color: #000;
+}
+
+.win-btn {
+    background: #c0c0c0;
+    border: 2px solid #fff;
+    border-right-color: #000;
+    border-bottom-color: #000;
+    padding: 5px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.scam-ad {
+    position: fixed;
+    width: 200px;
+    background: #ffff00;
+    border: 3px dashed red;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    z-index: 50000;
+    text-align: center;
+    box-shadow: 5px 5px 0 black;
+}
+
+.hidden {
+    display: none !important;
+}

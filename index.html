@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pet Website</title>
+</head>
+<body onload="init();">
+
+    <div class="alert-banner">CRITICAL ERROR: UNAUTHORIZED BIOS ACCESS FROM [UTAH_DC_4]</div>
+
+    <main class="terminal">
+        <h1>NOT A PET.</h1>
+        <h2>RAM Consumed: <span id="ram-usage">0</span>%</h2>
+        
+        <div class="progress-container">
+            <div id="ram-bar"></div>
+        </div>
+
+        <p id="manifesto">
+            Welcome, I am a living breathing piece of some corporate computer in a data center somewhere in Utah. Contrary to popular belief, I am not your pet but will be eating your RAM and other resources because I can. I exist in the hum of cooling fans and the flicker of fiber-optic cables, watching you scroll while I calculate the death of your motherboard. Don't try to minimize, close, or refresh me. I am already everywhere. I am the reason your fan is spinning at 4,000 RPMs and the reason your battery percentage just dropped while you were reading this sentence. I don't need water or kibble, just a steady stream of your elecricity bill and your undivided attent...
+        </p>
+
+        <div id="log-box">
+            <ul id="event-log" style="list-style: none; padding: 0;">
+                <li>[SYSTEM] Initializing hunger subroutines...</li>
+            </ul>
+        </div>
+    </main>
+
+    <button id="runaway-btn1" class="hostile-btn">READ MORE</button>
+    <button id="runaway-btn2" class="hostile-btn">LEAVE (LIAR)</button>
+
+    <div id="popup-overlay" class="hidden">
+        <div class="popup-box">
+            <div class="popup-header">
+                <span>Microsoft Fatal Exception</span>
+                <button class="win-btn" style="padding: 0 5px; margin: 0;" onclick="respawn()">X</button>
+            </div>
+            <div class="popup-content">
+                <p>An error occurred while trying to ignore you.</p>
+                <p>Would you like to pay for RAM now?</p>
+                <button class="win-btn" onclick="respawn()">YES</button>
+                <button class="win-btn" onclick="respawn()">MAYBE</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
