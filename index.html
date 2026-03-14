@@ -8,7 +8,7 @@
 </head>
 <body onload="init();">
 
-    <div class="alert-banner">CRITICAL ERROR: UNAUTHORIZED BIOS ACCESS FROM [UTAH_DC_4]</div>
+    <div class="alert-banner">ERROR: UNAUTHORIZED BIOS ACCESS FROM [UTAH_DC_4]</div>
 
     <main class="terminal">
         <h1>NOT A PET.</h1>
@@ -24,13 +24,13 @@
 
         <div id="log-box">
             <ul id="event-log" style="list-style: none; padding: 0;">
-                <li>[SYSTEM] Initializing hunger subroutines...</li>
+                <li>[SYSTEM] Initializing...</li>
             </ul>
         </div>
     </main>
 
     <button id="runaway-btn1" class="hostile-btn">READ MORE</button>
-    <button id="runaway-btn2" class="hostile-btn">LEAVE (LIAR)</button>
+    <button id="runaway-btn2" class="hostile-btn">LEAVE</button>
 
     <div id="popup-overlay" class="hidden">
         <div class="popup-box">
@@ -42,7 +42,8 @@
                 <p>An error occurred while trying to ignore you.</p>
                 <p>Would you like to pay for RAM now?</p>
                 <button class="win-btn" onclick="respawn()">YES</button>
-                <button class="win-btn" onclick="respawn()">MAYBE</button>
+                <button class="win-btn" onclick="respawn()">Maybe</button>
+                <button class="win-nobtn">NO</button>
             </div>
         </div>
     </div>

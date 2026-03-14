@@ -67,12 +67,18 @@ function addLog() {
     log.prepend(li);
 }
 
-function respawn() {
+function respawn(i=0) {
     overlay.classList.add('hidden');
     spawnAd();
     setTimeout(() => {
         overlay.classList.remove('hidden');
-    }, 200);
+        if (i < 5) {
+            respawn(i + 1);
+        } else {
+            console.log("yay");
+            spawnAd();
+        }
+    }, 1000);
 }
 
 function spawnAd() {
@@ -84,7 +90,7 @@ function spawnAd() {
     document.body.appendChild(ad);
 }
 
-// The Ultimate Native Loop
+// The Ultimate EVIL Loop
 function annoyingLoop() {
     alert("I said NOT A PET.");
     let choice = confirm("Are you sure you want to stop?");
@@ -94,7 +100,7 @@ function annoyingLoop() {
         alert("Smart choice. I'll take 2GB extra for your loyalty.");
     }
     prompt("Type 'I SURRENDER' to (not) close this window:");
-    setTimeout(annoyingLoop, 500);
+    setTimeout(annoyingLoop, 3000);
 }
 
 // Trigger loop on background click
