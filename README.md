@@ -44,7 +44,7 @@ Built With
 
 HTML5/CSS3: Utilizes @keyframes for the glitchy, high-contrast terminal aesthetic and strobe effects.
 
-Vanilla JavaScript: Handles the core logic, including the bouncing physics, native dialog loops, and DOM manipulation. No external libraries are used—it's pure, unadulterated chaos.
+Vanilla JavaScript: Handles the core logic, including the bouncing physics, native dialog loops, and DOM manipulation. No external libraries are used. it's pure chaos.
 
 Disclaimer
 
